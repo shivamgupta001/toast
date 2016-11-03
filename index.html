@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<script>
+	var Toast = function(config){
+		var className = config.className || null,
+			msg = config.msg || null,
+			animType = config.animType || 'toast-top-right';
+			
+		var div = document.createElement('div');
+		div.setAttribute("class", "toast-component");
+		if(className)
+			div.classList.add(className);
+		if(animType)
+			div.setAttribute("style","animation-name:"+animType+";");
+
+		div.innerHTML = msg;
+
+		document.body.appendChild(div);
+	};
+	Toast({
+		msg : 'Hello'
+	});
+</script>
+</body>
+</html>

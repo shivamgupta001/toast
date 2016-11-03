@@ -1,0 +1,330 @@
+.toast-component {
+  position: fixed;
+  min-width: 200px;
+  min-height: 75px;
+  border-radius: 1em;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: toast-top-left;
+  animation-duration: 4s;
+  visibility: hidden;
+  cursor: pointer; }
+  .toast-component:hover {
+    animation-play-state: paused;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+/*top animations*/
+@keyframes toast-top-left {
+  0% {
+    top: 0px;
+    left: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    top: 50px;
+    left: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    top: 50px;
+    left: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    top: 50px;
+    left: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+@keyframes toast-top-middle {
+  0% {
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+@keyframes toast-top-right {
+  0% {
+    top: 0px;
+    right: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    top: 50px;
+    right: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    top: 50px;
+    right: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    top: 50px;
+    right: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+/*left animations*/
+@keyframes toast-left-top {
+  0% {
+    top: 50px;
+    left: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    top: 50px;
+    left: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    top: 50px;
+    left: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    top: 50px;
+    left: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+@keyframes toast-left-middle {
+  0% {
+    top: 50%;
+    left: 0px;
+    transform: translate(0%, -50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    top: 50%;
+    left: 50px;
+    transform: translate(0%, -50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    top: 50%;
+    left: 50px;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    top: 50%;
+    left: 50px;
+    transform: translate(0%, -50%);
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+@keyframes toast-left-bottom {
+  0% {
+    left: 0px;
+    bottom: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    left: 50px;
+    bottom: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    left: 50px;
+    bottom: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    left: 50px;
+    bottom: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+/*right animations*/
+@keyframes toast-right-top {
+  0% {
+    top: 50px;
+    right: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    top: 50px;
+    right: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    top: 50px;
+    right: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    top: 50px;
+    right: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+@keyframes toast-right-middle {
+  0% {
+    top: 50%;
+    transform: translate(0%, -50%);
+    right: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    top: 50%;
+    transform: translate(0%, -50%);
+    right: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    top: 50%;
+    transform: translate(0%, -50%);
+    right: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    top: 50%;
+    transform: translate(0%, -50%);
+    right: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+@keyframes toast-right-bottom {
+  0% {
+    right: 0px;
+    bottom: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    right: 50px;
+    bottom: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    right: 50px;
+    bottom: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    right: 50px;
+    bottom: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+/*bottom animations*/
+@keyframes toast-bottom-left {
+  0% {
+    left: 50px;
+    bottom: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    left: 50px;
+    bottom: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    left: 50px;
+    bottom: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    left: 50px;
+    bottom: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+@keyframes toast-bottom-middle {
+  0% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+@keyframes toast-bottom-right {
+  0% {
+    right: 50px;
+    bottom: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: hidden; }
+  25% {
+    right: 50px;
+    bottom: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  75% {
+    right: 50px;
+    bottom: 50px;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  100% {
+    right: 50px;
+    bottom: 50px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    visibility: visible; }
+  /*  top , right , bottom , left */ }
+
+/*# sourceMappingURL=index.css.map */
