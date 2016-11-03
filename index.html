@@ -16,11 +16,20 @@
 		if(className)
 			div.classList.add(className);
 		if(animType)
-			div.setAttribute("style","animation-name:"+animType+";");
-
+			div.style.animationName = animType;
 		div.innerHTML = msg;
-
+		
+		div.addEventListener('animationstart', function(e){
+			console.log('animation start');
+		});
+		div.addEventListener('animationend', function(e){
+			document.body.removeChild(this);
+			console.log('animation end');
+		});
 		document.body.appendChild(div);
+
+
+		
 	};
 	Toast({
 		msg : 'Hello'
