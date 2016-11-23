@@ -12,8 +12,9 @@
   animation-name: toast-top-left;
   animation-duration: 4s;
   visibility: hidden;
-  cursor: pointer; }
-  .toast-component:hover {
+  cursor: pointer; 
+}
+.toast-component:hover {
     animation-play-state: paused;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }

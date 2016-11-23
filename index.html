@@ -6,31 +6,66 @@
 </head>
 <body>
 <script>
+	
+
 	var Toast = function(config){
-		var className = config.className || null,
-			msg = config.msg || null,
-			animType = config.animType || 'toast-top-right';
+		
+		var toast = {
+			scope : config,
+			_init : function(){
+
+				this._initialize();
+				this._generateTemplate();
+				this._applyProperty();
+				this._bindEvents();
+				this._render();
+
+			},
+			_initialize : function(){
+
+				var me = this.scope;
+				
+				this.compClass = me.compClass ? (me.compClass.constructor === Array ? me.compClass : [me.compClass]) : false;
+				this.msg = me.msg || null;
+				this.animType = me.animType || 'toast-top-right';
+
+			},
+			_generateTemplate : function(){
+
+				this.innerComp = document.createElement('div');
+				
+			},
+			_applyProperty : function(){
+
+				// add default class 
+				this.innerComp.classList.add("toast-component");
+
+				//apply property
+				if(this.compClass) 	this.innerComp.classList.add.apply(this.innerComp.classList , this.compClass);
+				if(this.animType) 	this.innerComp.style.animationName = this.animType;
+				if(this.msg) 		this.innerHTML = this.msg;
 			
-		var div = document.createElement('div');
-		div.setAttribute("class", "toast-component");
-		if(className)
-			div.classList.add(className);
-		if(animType)
-			div.style.animationName = animType;
-		div.innerHTML = msg;
-		
-		div.addEventListener('animationstart', function(e){
-			console.log('animation start');
-		});
-		div.addEventListener('animationend', function(e){
-			document.body.removeChild(this);
-			console.log('animation end');
-		});
-		document.body.appendChild(div);
+			},
+			_bindEvents : function(){
+				
+				//this.$innerComp.addEventListener('animationstart', this._handleAnimationStart);
+				this.innerComp.addEventListener('animationend', this._handleAnimationEnd);
 
+			},
+			_render : function(){
 
+				document.body.appendChild(this.innerComp);
+				
+			},
+			_handleAnimationEnd : function(){
+
+				document.body.removeChild(this);
+			}
+		};	
 		
+		toast._init();	
 	};
+
 	Toast({
 		msg : 'Hello'
 	});
