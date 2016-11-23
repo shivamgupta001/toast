@@ -3,6 +3,11 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<style type="text/css">
+		.toast-bg--color{
+			background-color: #0056a5;
+		}
+	</style>
 </head>
 <body>
 <script>
@@ -43,7 +48,7 @@
 				//apply property
 				if(this.compClass) 	this.innerComp.classList.add.apply(this.innerComp.classList , this.compClass);
 				if(this.animType) 	this.innerComp.style.animationName = this.animType;
-				if(this.msg) 		this.innerHTML = this.msg;
+				if(this.msg) 		this.innerComp.innerHTML = this.msg;
 			
 			},
 			_bindEvents : function(){
@@ -66,8 +71,19 @@
 		toast._init();	
 	};
 
+
+
 	Toast({
-		msg : 'Hello'
+		
+		msg : 'Hello',	// innerHTML value
+		compClass : 'toast-bg--color',  // additional class to add
+
+		// All Possible Values for animType
+		// toast-top-left		toast-bottom-left		toast-left-top		toast-right-top
+		// toast-top-middle		toast-bottom-middle		toast-left-middle	toast-right-middle
+		// toast-top-right		toast-bottom-right		toast-left-bottom	toast-right-bottom
+
+		animType : 'toast-bottom-middle'     //by deafult toast-top-right
 	});
 </script>
 </body>
